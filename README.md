@@ -16,3 +16,18 @@
 - **Tailwind CSS**
 - **shadcn-ui**: `npx shadcn-ui@latest init`
 
+<hr>
+
+## :handshake: Contributions
+
+Contributions are welcome! 
+
+If you have ideas for improvements, new features, or bug fixes, please feel free to open an issue or submit a pull request.
+
+## ⚖️ License
+
+This project is licensed under the MIT License - see the <a href=''>LICENSE</a> file for details.
+
+<hr>
+
+<h3><img title="Kushal-Kumar" width="18" src="https://raw.githubusercontent.com/bcd-kushal/bcd-kushal/main/assets/icons/dark/filled/kushalkumar_bg_dark.png"/>&nbsp;Kushal Kumar 2024 • All rights reserved </h3>
