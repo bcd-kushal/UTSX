@@ -14,7 +14,7 @@ Nextjs TypeScript Tailwind shadcn-ui
 - download the list of libraries/frameworks from Installation list below
 - copy paste files and use it
 
-## ⬇️ Installation:
+## ⬇️ Requirements (check `requirements.md`):
 
 - **Next.js**: `npx create-next-app@latest`
 - **TypeScript**
