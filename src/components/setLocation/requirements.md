@@ -2,3 +2,5 @@
 - typescript
 - tailwindcss
 - shadcn-ui
+    - sheet
+    - input
