@@ -44,6 +44,7 @@ function ItemCard({ data }: { data: itemCardType }) {
 }
 
 
+
 export function ItemsList({ title, data }: { title: string, data: itemListDataType }) {
     const [currTabIndex, setCurrTabIndex] = useState(0)
     const totalHeaderTypes = data.length

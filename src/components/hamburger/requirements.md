@@ -1,0 +1,3 @@
+- typescript
+- tailwindcss
+- shadcn-ui
