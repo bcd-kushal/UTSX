@@ -1,0 +1,10 @@
+- next.js
+- typescript
+- tailwindcss
+- shadcn-ui
+    - button
+    - card
+    - dialog
+    - input
+    - label
+    - toast

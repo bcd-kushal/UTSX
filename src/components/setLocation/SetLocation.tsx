@@ -1,16 +1,16 @@
 'use client'
 import React, { useState } from "react"
-import { LocationSearchLogic } from "./location-search-logic/LocationSearchLogic"
+import { LocationSearchLogic } from "./logic/LocationSearchLogic"
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { allCitiesType, popularCitiesType, TraySideType } from "./utils/types"
 
 
-export function LocationSet({ cookieLocation, side, children, cookieKey, allCities, popularCities }:{ cookieLocation:string, side?:TraySideType, cookieKey:string, allCities:allCitiesType, popularCities?:popularCitiesType, children?:Readonly<React.ReactNode> }) {
-    const [currLocation,setCurrLocation] = useState(cookieLocation)
+export function LocationSet({ cookieLocation, side, children, cookieKey, allCities, popularCities }: { cookieLocation: string, side?: TraySideType, cookieKey: string, allCities: allCitiesType, popularCities?: popularCitiesType, children?: Readonly<React.ReactNode> }) {
+    const [currLocation, setCurrLocation] = useState(cookieLocation)
 
     return (
         <Sheet>
-            <SheetTrigger className="w-fit" asChild>                
+            <SheetTrigger className="w-fit" asChild>
 
                 {children}
 
@@ -24,7 +24,7 @@ export function LocationSet({ cookieLocation, side, children, cookieKey, allCiti
                     Select your location here. Click save when done.
                 </SheetDescription>
 
-                <LocationSearchLogic setGlobalLoc={setCurrLocation} allCities={allCities} popularCities={popularCities} cookieKey={cookieKey}  />
+                <LocationSearchLogic setGlobalLoc={setCurrLocation} allCities={allCities} popularCities={popularCities} cookieKey={cookieKey} />
 
             </SheetContent>
         </Sheet>

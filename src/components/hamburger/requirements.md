@@ -1,3 +1,4 @@
 - typescript
 - tailwindcss
 - shadcn-ui
+    - accordion

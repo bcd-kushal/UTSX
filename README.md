@@ -5,16 +5,12 @@
 <img style="height:24px" title="shadcn/ui" src="https://avatars.githubusercontent.com/u/139895814?s=200&v=4"/> &nbsp;
 <img style="height:24px" title="tailwind" src="https://user-images.githubusercontent.com/25181517/202896760-337261ed-ee92-4979-84c4-d4b829c7355d.png"/> &nbsp;
 
-## Requirements:
-
-Nextjs TypeScript Tailwind shadcn-ui
-
 ## ✨ Usage:
 
-- download the list of libraries/frameworks from Installation list below
+- download the list of libraries/frameworks from `requirements.md` inside each distinct `/app/components` folder
 - copy paste files and use it
 
-## ⬇️ Installation:
+## ⬇️ Requirements (check `requirements.md`):
 
 - **Next.js**: `npx create-next-app@latest`
 - **TypeScript**

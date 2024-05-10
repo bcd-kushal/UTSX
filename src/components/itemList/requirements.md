@@ -1,2 +1,5 @@
+- next.js
 - typescript
 - tailwindcss
+- shadcn-ui
+    - carousel

@@ -1,6 +1,3 @@
-- next.js
 - typescript
 - tailwindcss
 - shadcn-ui
-    - sheet
-    - input
