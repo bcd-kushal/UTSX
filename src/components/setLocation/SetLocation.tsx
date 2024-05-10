@@ -2,7 +2,7 @@
 import React, { useState } from "react"
 import { LocationSearchLogic } from "./location-search-logic/LocationSearchLogic"
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
-import { allCitiesType, popularCitiesType, TraySideType, BreakpointType } from "./utils/types"
+import { allCitiesType, popularCitiesType, TraySideType } from "./utils/types"
 
 
 export function LocationSet({ cookieLocation, side, children, cookieKey, allCities, popularCities }:{ cookieLocation:string, side?:TraySideType, cookieKey:string, allCities:allCitiesType, popularCities?:popularCitiesType, children?:Readonly<React.ReactNode> }) {
