@@ -1,7 +1,18 @@
 export interface SignupRegistrationProps {
-    title?: string,
-    desc?: string,
-    cph?: string, cpw?: string,
+    title?: string
+    description?: string
+    requiredToReadTermsConditions?: true
+    useTermsConditions?: true
+    useSession?: true,
+    session?: {
+        key: string,
+        expiry: number
+    }
+    showLogin?: true
+    loginField?: {
+        label?: string,
+        linkLabel?: string
+    }
 }
 
 export interface returnType { result: boolean, msg: string }

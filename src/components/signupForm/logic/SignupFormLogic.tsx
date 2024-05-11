@@ -16,7 +16,7 @@ import { ArrowLeftIcon, ReloadIcon } from "../utils/svgs"
 
 // ====[ REGISTRATION FORM ]====================================
 
-export function RegistrationForm({ props }: { props?: SignupRegistrationProps }) {
+export function RegistrationForm({ props }: { props: SignupRegistrationProps }) {
     const { toast } = useToast()
     const [loadingRegister, setLoadingRegister] = React.useState(false)
     const [newUser, setNewUser] = React.useState(false)
@@ -25,10 +25,13 @@ export function RegistrationForm({ props }: { props?: SignupRegistrationProps })
     const [password, setPassword] = React.useState("")
     const [email, setEmail] = React.useState("")
     const [termsAccepted, setTermsAccepted] = React.useState(false)
+
+    const sessionKey = props.session?.key || "__username__"
+
     React.useEffect(() => {
         if (newUser) {
-            sessionStorage.setItem('__minify_username__', username)
-            document.cookie = `__minify_username__=${username}; expires=Wed, 05 Mar 2024 00:00:00 UTC; path=/`
+            sessionStorage.setItem(sessionKey,username)
+            document.cookie = `${sessionKey}=${username}; expires=Wed, 05 Mar 2024 00:00:00 UTC; path=/`
         }
         return () => { }
     }, [newUser, username])
@@ -67,11 +70,11 @@ export function RegistrationForm({ props }: { props?: SignupRegistrationProps })
         }, 250)
     }
     return (
-        <Card className={`max-w-screen w-fit h-fit mt-[112px] mb-8 md:my-[60px] py-[24px] flex flex-col gap-[15px]`} >
+        <Card className={`max-w-screen w-fit h-fit py-10 md:py-6 flex flex-col gap-[15px]`} >
             <CardHeader className="px-10 md:px-6">
                 <div className="text-xs pb-5 w-fit text-[#888] hover:underline hover:cursor-pointer flex items-center gap-3" onClick={()=>router.replace('/')}><ArrowLeftIcon />Back</div>
-                <CardTitle className="text-3xl">Register</CardTitle>
-                <CardDescription>Welcome to Minify!</CardDescription>
+                <CardTitle className="text-3xl">{props?.title || "Signup"}</CardTitle>
+                <CardDescription>{props?.description || "Create an account to continue"}</CardDescription>
             </CardHeader>
             <CardContent className="max-w-screen px-10 md:px-6 w-[480px] md:w-[320px]">
                 <form action={handleRegistration}>
@@ -101,7 +104,7 @@ export function RegistrationForm({ props }: { props?: SignupRegistrationProps })
                     </div>
                     <CardFooter className="flex justify-between px-0 mt-8 pb-2 items-center">
                         <Button type="submit" className="mt-8" disabled={!Boolean(termsAccepted) || Boolean(loadingRegister)}><ReloadIcon className={loadingRegister ? "mr-2 h-4 w-4 animate-spin" : "hidden"} />Register</Button>
-                        <CardDescription className="text-xs mt-8">Already a user? <Link href="/signin" className="text-[#3b82f6] hover:underline text-xs">Signin</Link></CardDescription>
+                        <CardDescription className="text-xs mt-8">{props.loginField?.label || "Already a user?"} <Link href="/signin" className="text-[#3b82f6] hover:underline text-xs">{props.loginField?.linkLabel || "Signin"}</Link></CardDescription>
                     </CardFooter>
                 </form>
             </CardContent>
