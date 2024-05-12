@@ -5,8 +5,8 @@ export const DEFAULTS = {
     },
     ON_HOVER: {
         BG: "[#0075FE]",
-        TEXT: "white",
-        SHADOW: "[#0075FE30]"
+        TEXT: "[#fff]",
+        SHADOW: "[#0075FE]"
     },
     EVEN: {
         BG: "transparent",
