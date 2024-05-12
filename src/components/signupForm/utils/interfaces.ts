@@ -38,6 +38,8 @@ export interface SignupRegistrationProps {
     }
 }
 
+export interface SignupFormOnActionCallbackType { username:string, email:string, password:string}
+
 export interface returnType { result: boolean, msg: string }
 
 export interface checkboxProps { 
@@ -63,4 +65,11 @@ export interface PasswordPreviewSyntaxType {
         special: boolean
         minLength: number
     }
+}
+
+export interface ToastType {
+    title: string
+    description: string 
+    className: string 
+    variant: 'default' | 'destructive'
 }

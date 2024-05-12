@@ -1,4 +1,4 @@
-import { SignupRegistrationProps } from "../utils/interfaces";
+import { ToastType } from "../utils/interfaces"
 
 export const DEFAULTS = {
     disableSignupIfMalformed: true,
@@ -38,4 +38,11 @@ export const DEFAULTS = {
         signupBtn: "",
         backLink: "",
     }
+}
+
+export const TOAST_DEFAULT: ToastType = {
+    title: "Incomplete",
+    description: "Fill registration form completely",
+    className: "px-[20px]",
+    variant: "destructive"
 }

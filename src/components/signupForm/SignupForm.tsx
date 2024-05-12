@@ -1,12 +1,12 @@
-'use server'
+'use client'
 import { RegistrationForm } from "./logic/SignupFormLogic"
-import { SignupRegistrationProps } from "./utils/interfaces"
+import { SignupFormOnActionCallbackType, SignupRegistrationProps } from "./utils/interfaces"
 
 
-export default async function SignupForm({ props }: { props?: SignupRegistrationProps }) {
+export default function SignupForm({ props, onSubmit }: { props?: SignupRegistrationProps, onSubmit:({username, email, password}:SignupFormOnActionCallbackType)=>void }) {
     return (
         <section className="flex justify-center items-center min-h-full">
-            <RegistrationForm props={props}/>
+            <RegistrationForm props={props} onAction={onSubmit}/>
         </section>
     )
 }
