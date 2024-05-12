@@ -1,15 +1,12 @@
+'use server'
 import { RegistrationForm } from "./logic/SignupFormLogic"
 import { SignupRegistrationProps } from "./utils/interfaces"
 
 
-export default function SignupForm() {
-    const RegistrationData: SignupRegistrationProps = {
-        title: "Register",
-        description: "Register to proceed"
-    }
+export default async function SignupForm({ props }: { props?: SignupRegistrationProps }) {
     return (
         <section className="flex justify-center items-center min-h-full">
-            <RegistrationForm props={RegistrationData}/>
+            <RegistrationForm props={props}/>
         </section>
     )
 }
