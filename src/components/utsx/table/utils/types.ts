@@ -41,15 +41,9 @@ type CellStylesType = {
     text?: string
 }
 
-export type tableStylesType = {
-    header?: CellStylesType
-    onHover?: CellStylesType
-    even?: CellStylesType
-    odd?: CellStylesType
-}
-
 export type tableClassNameType = {
     header?: string
     row?: string
+    alternateRow?: string
     table?: string
 }

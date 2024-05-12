@@ -1,5 +1,5 @@
 import { ReactNode } from "react"
-import styles from "./backdrop.module.css"
+// import styles from "./backdrop.module.css"
 import { vertical, horizontal } from "../constants/defaults"
 
 export default function Backdrop({
@@ -18,7 +18,7 @@ export default function Backdrop({
 }) {
   return (
     <div
-      className={styles.container}
+      className={``}
       style={{
         alignItems: vertical[verticalPosition],
         justifyContent:
@@ -26,10 +26,10 @@ export default function Backdrop({
       }}
     >
       <div
-        className={styles.backdrop}
+        className={``}
         onClick={handleClick}
       />
-      <div className={styles.content}>
+      <div className={``}>
         {children}
       </div>
     </div>
