@@ -1,6 +1,6 @@
 {
-  "name": "utilitees",
-  "version": "0.1.0",
+  "name": "utsx",
+  "version": "1.4.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
