@@ -10,7 +10,7 @@ export type SearchBarProps = {
     popupSide?: "top" | "right" | "bottom" | "left"
 }
 
-export type SearchBoxInputType = { placeholder:string, onKeyUp:React.Dispatch<React.SetStateAction<string>> }
+export type SearchBoxInputType = { placeholder:string, searchVal:string, onKeyUp:React.Dispatch<React.SetStateAction<string>> }
 
 export type SearchTagsType = { label:string, link:string, svg:JSX.Element }[]
 
