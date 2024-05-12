@@ -3,23 +3,22 @@ import React from "react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useToast } from "@/components/ui/use-toast"
-import { ToastAction } from "@/components/ui/toast"
 import { Card, CardContent, CardDescription, CardTitle, CardHeader, CardFooter } from "@/components/ui/card"
 import { Label } from "@/components/ui/label"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { PasswordPreviewSyntaxType, SignupRegistrationProps } from "../utils/interfaces"
+import { PasswordPreviewSyntaxType, SignupFormOnActionCallbackType, SignupRegistrationProps } from "../utils/interfaces"
 import { isEmailAuthentic } from "./authenticEmail"
 import { CheckboxComponent } from "./CheckboxTnC"
 import { ArrowLeftIcon, ReloadIcon } from "../utils/svgs"
 import { ShowPasswordSyntaxMessage } from "./ShowPasswordSyntaxMessage"
 import { INVALID_MSG_COLOR, LINK_COLOR, VALID_MSG_COLOR } from "../constants/colors"
 import { REGEX_FIELD_VALUE_TEST } from "../constants/regex"
-import { DEFAULTS } from "../constants/defaults"
+import { DEFAULTS, TOAST_DEFAULT } from "../constants/defaults"
 
 // ====[ REGISTRATION FORM ]====================================
 
-export function RegistrationForm({ props }: { props?: SignupRegistrationProps }) {
+export function RegistrationForm({ props, onAction }: { props?: SignupRegistrationProps, onAction: ({username, email, password}:SignupFormOnActionCallbackType)=>void }) {
     const { toast } = useToast()
     const router = useRouter()
     
@@ -75,30 +74,14 @@ export function RegistrationForm({ props }: { props?: SignupRegistrationProps })
         setTimeout(() => {
             if (formError.email || formError.password || formError.username)
                 toast({
-                    title: "Incomplete",
-                    description: "Fill registration form completely",
-                    className: "px-[20px]",
-                    variant: "destructive"
+                    title: TOAST_DEFAULT.title,
+                    description: TOAST_DEFAULT.description,
+                    className: TOAST_DEFAULT.className,
+                    variant: TOAST_DEFAULT.variant
                 })
             else {
-                const credentials = { username: formData.get("register_name")!, email: formData.get("register_email")!, password: formData.get("register_password")! }
-                // check creds match or not here...
-                // if they dont, redirect to register page
-                // if creds match go to dashboard
-                const isEmailRegistered = isEmailAuthentic({email:email})
-                if (!isEmailRegistered.result)
-                    toast({
-                        title: "This user exists",
-                        description: isEmailRegistered.msg,
-                        action: (<Link href="/signin"><ToastAction altText="Already registered account">Signin now</ToastAction></Link>),
-                        className: "px-[20px]"
-                    })
-                else {
-                    // save to session storage and as cookie
-                    setUsername(prev => String(credentials.username))
-                    setNewUser(prev => true)
-                    // setTimeout(()=>router.push(`/home/${credentials.username}`),2000)
-                }
+                const credentials = { username: formData.get("register_name")! as string, email: formData.get("register_email")! as string, password: formData.get("register_password")! as string }
+                onAction(credentials)
             }
 
             if(showLoading)
