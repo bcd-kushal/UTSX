@@ -10,3 +10,4 @@
     - input
     - label
     - toast
+    - checkbox
