@@ -1,4 +1,4 @@
-# UTSX: A `.tsx`, `.jsx` Utility Components
+# UTSX: `.tsx` `.jsx` Utility Components
 
 <img style="height:23px" title="nextjs" src="https://github.com/marwin1991/profile-technology-icons/assets/136815194/5f8c622c-c217-4649-b0a9-7e0ee24bd704"/> &nbsp;
 <img style="height:26px" title="typescript" src="https://user-images.githubusercontent.com/25181517/183890598-19a0ac2d-e88a-4005-a8df-1ee36782fde1.png"/> &nbsp;
