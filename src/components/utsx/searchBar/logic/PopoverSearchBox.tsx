@@ -1,6 +1,7 @@
 import { ArrowTopRightIcon, CardStackPlusIcon, CounterClockwiseClockIcon, ImageIcon, Link2Icon, ReaderIcon, ResumeIcon } from "@radix-ui/react-icons"
 import { SearchTagsType } from "../utils/types"
 import { isValidInput } from "../utils/validInput"
+import { FilledSearchFieldBox } from "./SearchOnType"
 
 const recentSearches = [
     { label:"Rajesh", timePast:"3m ago" },
@@ -22,7 +23,7 @@ const recentSearches = [
 
 export function PopoverSearchBox({ inputValue, setState, searchTags }: { inputValue: string, setState:React.Dispatch<React.SetStateAction<string>>, searchTags?:SearchTagsType }) {
     return (
-        <section className="grid max-w-[calc(100dvw_-_32px)] w-[360px] sm:w-[450px] md:w-[640px] *:row-start-1 *:col-start-1"> 
+        <section className="grid max-w-[calc(100dvw_-_32px)] min-h-[200px] w-[360px] sm:w-[450px] md:w-[640px] *:row-start-1 *:col-start-1"> 
             {isValidInput(inputValue) ? <FilledSearchFieldBox needle={inputValue} haystack={{}}/> : <EmptySearchFieldBox inputValue={inputValue} setState={setState} tags={searchTags}/>} 
         </section>
     )
@@ -35,7 +36,7 @@ export function PopoverSearchBox({ inputValue, setState, searchTags }: { inputVa
 const EmptySearchFieldBox = ({ inputValue, setState, tags }:{ inputValue:string, tags?:SearchTagsType, setState:React.Dispatch<React.SetStateAction<string>> }) => {
 
     return (
-        <section className="max-h-screen min-h-[200px] pt-3 h-fit flex flex-col items-stretch justify-start">
+        <section className="max-h-screen pt-3 h-fit flex flex-col items-stretch justify-start">
 
             {/* tags ------------------------ */
             tags && tags.length > 0 ?   <div className="px-3 pb-3 border-b-[1px] border-[#cdcdcd] flex flex-wrap items-center justify-start gap-[6px] *:rounded-md *:py-1 *:px-2 *:border-[1px] *:border-[#12121225] *:duration-300 *:transition-all">
@@ -65,15 +66,3 @@ const EmptySearchFieldBox = ({ inputValue, setState, tags }:{ inputValue:string,
 }
 
 
-{/* DEFAULT SEARCH SHOW ON CLICK ############################### */ }
-const FilledSearchFieldBox = ({needle,haystack}:{needle:string,haystack:any}) => {
-    return (
-        <section className="max-h-screen min-h-[200px] h-fit flex flex-col items-stretch justify-start gap-1">
-
-            {/* tags ------------------------ */}
-            {/* recent searches ------------------------ */}
-            Search key: {needle}
-
-        </section>
-    )
-}
