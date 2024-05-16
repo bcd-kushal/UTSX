@@ -13,7 +13,7 @@ https://utsx.kushalkumarsaha.com/
 - copy paste files and use it
 
 ## ⬇️ Requirements (check `requirements.md`):
-
+ 
 - **Next.js**: `npx create-next-app@latest`
 - **TypeScript**
 - **Tailwind CSS**
