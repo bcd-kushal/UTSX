@@ -31,6 +31,6 @@ If you have ideas for improvements, new features, or bug fixes, please feel free
 
 This project is licensed under the MIT License - see the <a href=''>LICENSE</a> file for details.
 
-<hr>
+<hr> 
 
 <h3><img title="Kushal-Kumar" width="18" src="https://raw.githubusercontent.com/bcd-kushal/bcd-kushal/main/assets/icons/dark/filled/kushalkumar_bg_dark.png"/>&nbsp;Kushal Kumar 2024 • All rights reserved </h3>
