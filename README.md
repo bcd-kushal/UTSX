@@ -6,7 +6,7 @@
 <img style="height:24px" title="tailwind" src="https://user-images.githubusercontent.com/25181517/202896760-337261ed-ee92-4979-84c4-d4b829c7355d.png"/> &nbsp;
 
 https://utsx.kushalkumarsaha.com/ 
- 
+
 ## ✨ Usage:
 
 - download the list of libraries/frameworks from `requirements.md` inside each distinct `/app/components` folder
