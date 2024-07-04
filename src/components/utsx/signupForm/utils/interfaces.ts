@@ -13,7 +13,7 @@ export interface SignupRegistrationProps {
     }
     showLogin?: boolean
     loginField?: {
-        label?: string,
+        label?: string, 
         linkLabel?: string
         link: string
     }
