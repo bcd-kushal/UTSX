@@ -5,7 +5,7 @@ import { vertical, horizontal } from "../constants/defaults"
 export default function Backdrop({
   handleClick = () => {},
   verticalPosition = "center",
-  horizontalPosition = "center", 
+  horizontalPosition = "center",
   children
 }: {
   handleClick?: () => void
