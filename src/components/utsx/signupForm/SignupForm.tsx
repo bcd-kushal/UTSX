@@ -9,4 +9,4 @@ export default function SignupForm({ props, onSubmit }: { props?: SignupRegistra
             <RegistrationForm props={props} onAction={onSubmit}/>
         </section>
     )
-} 
+}
