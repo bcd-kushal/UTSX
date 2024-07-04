@@ -29,9 +29,11 @@ export default function Backdrop({
         className={``}
         onClick={handleClick}
       />
+      
       <div className={``}>
         {children}
       </div>
+    
     </div>
   )
 }
