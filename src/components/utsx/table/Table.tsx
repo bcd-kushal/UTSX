@@ -28,7 +28,7 @@ export default function Table({ data, classNames }: { data: tableDataType, class
                     {data.header.map((head, index) => (
                         <span key={index} className={ index === 0 ? "" : "text-center" } > {capitalize(head.label)} </span>
                     ))}
-                </div>
+                </div> 
 
                 {/* table data ------------------------- */}
                 {data.data.map((row, index) => (
