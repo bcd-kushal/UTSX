@@ -66,7 +66,7 @@ export interface PasswordPreviewSyntaxType {
         minLength: number
     }
 }
- 
+
 export interface ToastType {
     title: string
     description: string 
