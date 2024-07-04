@@ -5,7 +5,6 @@ import { TableModalWrapperButton } from "./logic/TableModalWrapper"
 import { tableColsWidthRatio } from "./utils/tableColsSpanWidth"
 import config from "./utils/config.module.css"
 
-
 export default function Table({ data, classNames }: { data: tableDataType, classNames?:tableClassNameType }) {
     // const totalCols: number = data.header.length + 1
     const gridTemplateColsRatio: string = tableColsWidthRatio(data.header)
