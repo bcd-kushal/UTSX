@@ -38,7 +38,7 @@ export default function Table({ data, classNames }: { data: tableDataType, class
                             item.action.type === "modalButton" ? (<TableModalWrapperButton key={index2} label={item.label.label} modalTitle="Confirm action" onClickTrigger={ item.action.action } type="action" modalType={ item.action.modalType ? item.action.modalType : "normal" } className={ index2 === 0 ? "" : "w-full flex items-center justify-center" } />) : 
                             item.action.type === "component"   ? (<span className="w-full h-full flex items-center justify-center" key={ String(index2)+String(index) } > {item.label.label} </span>) : 
                                                                  (<span onClick={() => handleItemAction(item.action) } key={ String(index2)+String(index) } className={ index2 === 0 ? "" : "flex items-center justify-center" } > {item.label.label} </span>)
-                        )} 
+                        )}
                     </div>
                 ))}
             </div>
