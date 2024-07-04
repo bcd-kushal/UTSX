@@ -28,12 +28,14 @@ export default function Modal({
         <div
           className={`w-full flex items-end justify-between *:rounded-lg *:py-2 *:px-3 *:cursor-pointer *:transition-colors *:duration-300`}
         >
+          
           <button
             onClick={onCancel}
             className="text-[#121212] bg-[#12121215] hover:bg-[#12121240]"
           >
             Cancel
           </button>
+          
           <button
             onClick={onAction}
             className={`text-white bg-[#121212] ${triggerType === "destructive" ? "hover:bg-red-700" : "hover:bg-[#0075FE]"}`}
