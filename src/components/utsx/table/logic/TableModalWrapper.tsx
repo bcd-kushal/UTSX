@@ -7,7 +7,6 @@ import { TableModalWrapperType } from "../utils/types"
 
 export function TableModalWrapperButton({ label, type, onClickTrigger, modalTitle, href, modalType, className }: TableModalWrapperType) {
 	const [showModal, setShowModal] = useState<boolean>(false)
-
 	const handleModal = () => {
 		onClickTrigger()
 		setShowModal(false)
