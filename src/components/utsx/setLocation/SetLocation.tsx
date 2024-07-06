@@ -12,10 +12,9 @@ export function LocationSet({ cookieLocation, side, children, cookieKey, allCiti
     return (
         <Sheet>
             <SheetTrigger className="w-fit" asChild>
-
                 {children}
-
             </SheetTrigger>
+            
             <SheetContent side={side || DEFAULT_TRAY_ALIGN}>
                 <SheetHeader>
                     <SheetTitle>Select location</SheetTitle>
