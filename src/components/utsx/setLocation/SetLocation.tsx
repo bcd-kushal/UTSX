@@ -5,7 +5,6 @@ import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTr
 import { allCitiesType, popularCitiesType, TraySideType } from "./utils/types"
 import { DEFAULT_TRAY_ALIGN } from "./constants/defaults"
 
-
 export function LocationSet({ cookieLocation, side, children, cookieKey, allCities, popularCities }: { cookieLocation: string, side?: TraySideType, cookieKey: string, allCities: allCitiesType, popularCities?: popularCitiesType, children?: Readonly<React.ReactNode> }) {
     const [currLocation, setCurrLocation] = useState(cookieLocation)
 
