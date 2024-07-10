@@ -16,7 +16,7 @@ https://utsx.kushalkumarsaha.com/
  
 - **Next.js**: `npx create-next-app@latest`
 - **TypeScript**
-- **Tailwind CSS**
+- **Tailwind**
 - **shadcn-ui**: `npx shadcn-ui@latest init`
 
 <hr>
