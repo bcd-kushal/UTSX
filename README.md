@@ -5,7 +5,7 @@
 <img style="height:24px" title="shadcn/ui" src="https://avatars.githubusercontent.com/u/139895814?s=200&v=4"/> &nbsp;
 <img style="height:24px" title="tailwind" src="https://user-images.githubusercontent.com/25181517/202896760-337261ed-ee92-4979-84c4-d4b829c7355d.png"/> &nbsp;
 
-https://utsx.kushalkumarsaha.com/  
+https://utsx.kushalkumarsaha.com/ 
 
 ## ✨ Usage:
 
