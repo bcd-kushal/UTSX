@@ -6,4 +6,18 @@ export type FooterLinksSectionType = Array<{
     links: { label: string; link: string }[]
 }>
   
-export type FooterType = { theme: FooterThemeType, footerLinks: FooterLinksSectionType, disallowedRoutes: string[] }
+export type FooterType = { 
+    theme: FooterThemeType, 
+    header: JSX.Element | string,
+    footerLinks: FooterLinksSectionType, 
+    disallowedRoutes: string[],
+    socialLinks: FooterSocialLinksType,
+    brandName: string
+}
+
+export type ChildrenType = Readonly<React.ReactNode>
+
+export type FooterSocialLinksType = {
+    showLabel?: boolean,
+    links: { link: string, svg: JSX.Element }[]
+}
